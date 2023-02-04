@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em vs Rem</title>
+    <style>
+    :root {
+        /* font-size: 1rem; */
+    }
+    html {
+        /* font-size: 1rem; */
+    }
+    body {
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .component-em {
+        font-size: 1em;
+    }
+    .component-em h2 {
+        font-size: 2em;
+    }
+    .component-em p {
+        font-size: 1em;
+    }
+    p.sizedwithrem {
+        font-size: 1rem;
+    } 
+    .component-rem {
+        font-size: 2rem;
+    }
+    .component-rem h2 {
+        font-size: 2rem;
+    }
+    .component-rem p {
+        font-size: 1rem;
+    }
+    </style>
+</head>
+<body>
+    <h1>Em vs Rem</h1>
+    <p>Experiment with the effects of mixing rem and em units by setting the font size of the component divs and seeing the effects on children. Elements sized with rem units are generally not affected by changing the font size of their parent, but elements sized with em units are. The only way to have a cascading affect on font size of elements sized with rem units is to change the font size of the :root pseudo class or the html element itself, as :root and html are at the very tippy top of the document object model.</p>
+    <div class="component-em">
+        <h2>Component with children sized using em units</h2>
+        <p>This paragraph's text is sized with em units.</p>
+        <p class="sizedwithrem">This paragraph is an exception that is sized with rem units.</p>
+    </div>
+    <div class="component-rem">
+        <h2>Component with children sized using rem units</h2>
+        <p>This component shows the results of using rem units.</p>
+    </div>
+</body>
+</html>
